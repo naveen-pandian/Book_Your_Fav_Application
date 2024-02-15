@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BookYourFavModelStoreContainer" CdmEntityContainer="BookYourFavEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="BookYourFavModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="aid" ColumnName="aid" />
+          <ScalarProperty Name="aname" ColumnName="aname" />
+          <ScalarProperty Name="apassword" ColumnName="apassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="BookYourFavModel.Book">
+        <MappingFragment StoreEntitySet="Book">
+          <ScalarProperty Name="bid" ColumnName="bid" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="uname" ColumnName="uname" />
+          <ScalarProperty Name="mid" ColumnName="mid" />
+          <ScalarProperty Name="mname" ColumnName="mname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="BookYourFavModel.Movie">
+        <MappingFragment StoreEntitySet="Movie">
+          <ScalarProperty Name="mid" ColumnName="mid" />
+          <ScalarProperty Name="mname" ColumnName="mname" />
+          <ScalarProperty Name="mtheaterName" ColumnName="mtheaterName" />
+          <ScalarProperty Name="mlocation" ColumnName="mlocation" />
+          <ScalarProperty Name="mticketAllocated" ColumnName="mticketAllocated" />
+          <ScalarProperty Name="mticketBooked" ColumnName="mticketBooked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BookYourFavModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="uname" ColumnName="uname" />
+          <ScalarProperty Name="upassword" ColumnName="upassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

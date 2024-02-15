@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BookYourFavModelStoreContainer" CdmEntityContainer="BookYourFavEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="BookYourFavModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="apassword" ColumnName="apassword" />
+          <ScalarProperty Name="aid" ColumnName="aid" />
+          <ScalarProperty Name="aname" ColumnName="aname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BookYourFavModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="upassword" ColumnName="upassword" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="uname" ColumnName="uname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="BookYourFavModel.Book">
+        <MappingFragment StoreEntitySet="Book">
+          <ScalarProperty Name="mname" ColumnName="mname" />
+          <ScalarProperty Name="mid" ColumnName="mid" />
+          <ScalarProperty Name="uname" ColumnName="uname" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="bid" ColumnName="bid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="BookYourFavModel.Movie">
+        <MappingFragment StoreEntitySet="Movie">
+          <ScalarProperty Name="mticketBooked" ColumnName="mticketBooked" />
+          <ScalarProperty Name="mticketAllocated" ColumnName="mticketAllocated" />
+          <ScalarProperty Name="mlocation" ColumnName="mlocation" />
+          <ScalarProperty Name="mtheaterName" ColumnName="mtheaterName" />
+          <ScalarProperty Name="mname" ColumnName="mname" />
+          <ScalarProperty Name="mid" ColumnName="mid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
