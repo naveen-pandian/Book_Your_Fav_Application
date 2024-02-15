@@ -1,0 +1,40 @@
+﻿@model BookYourFav.Models.Movie
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "Add New Movie";
+}
+<h2>New Movie</h2>
+
+@using (Html.BeginForm("AddNew", "Home", new { area = "Admin" }, FormMethod.Post, null))
+{
+    <table style="margin-left:40%;">
+        <tr>
+            <td>@Html.Label("Movie Name")</td>
+            <td>@Html.TextBoxFor(movie => movie.mname)</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Theater Name")</td>
+            <td>@Html.TextBoxFor(movie => movie.mtheaterName)</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Location")</td>
+            <td>@Html.TextBoxFor(movie => movie.mlocation)</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Tickets Allocated")</td>
+            <td>@Html.TextBoxFor(movie => movie.mticketAllocated)</td>
+            <td><input type="hidden" name="mticketBooked" value="0" /></td>
+        </tr>
+       
+    </table>
+        <br />
+        <input type="submit" value="Add" />
+        <br /><br />
+        @ViewBag.Aresult
+    <br /><br />
+
+
+}

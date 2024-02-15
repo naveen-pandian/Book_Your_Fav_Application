@@ -1,0 +1,32 @@
+﻿@model List<Tuple<int,String>>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "Book";
+}
+<h2>@ViewBag.name</h2>
+<table style="margin-left:40%;">
+    @{
+        int sno = 1;
+    }
+    <tr>
+        <th>S.No</th>
+        <th>User Name</th>
+        <th>Tickets Booked</th>
+    </tr>
+    <tr><td>&nbsp;</td></tr>
+
+    @foreach (var start in Model)
+    {
+        <tr>
+            <td><text>[@sno]</text></td>
+            <td>@start.Item2</td>
+            <td>@start.Item1</td>
+            
+        </tr>
+        sno++;
+    }
+
+</table>

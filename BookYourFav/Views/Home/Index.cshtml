@@ -1,0 +1,17 @@
+﻿@model BookYourFav.Models.Admin
+@{ 
+    ViewBag.Title = "Home";
+}
+
+
+    <button class="btn" onclick="location.href='@Url.Action("Login", "Home", new { area = "" }, null)'">Login</button>&nbsp;&nbsp;&nbsp;
+    <button class="btn" onclick="location.href='@Url.Action("Register", "Home", new { area = "" }, null)'">Register</button>
+    <br /><br />
+    <text>----------------- Or -----------------</text>
+    <br /><br />
+    <button class="btn" onclick="location.href='@Url.Action("AdminLogin", "Home", new { area = "" }, null)'">Admin Login</button>
+  
+      
+     
+   
+

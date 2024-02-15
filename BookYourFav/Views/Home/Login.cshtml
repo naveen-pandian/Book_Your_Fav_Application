@@ -1,0 +1,26 @@
+﻿@model BookYourFav.Models.User
+@{
+    ViewBag.Title = "Login";
+}
+
+
+@using (Html.BeginForm("Login","Home",new { area = "" },FormMethod.Post,null)) {
+       <table style="margin-left:40%;">
+           <tr>
+               <td>@Html.Label("Name")</td>
+               <td>@Html.TextBoxFor(user => user.uname)</td>
+           </tr>
+           <tr>
+               <td>@Html.Label("Password")</td>
+               <td>@Html.PasswordFor(user => user.upassword)</td>
+           </tr>
+        </table>
+        <br />       
+   
+        <input class="btn" type="submit" value="Login"/>
+       <br /><br />
+
+
+}
+
+

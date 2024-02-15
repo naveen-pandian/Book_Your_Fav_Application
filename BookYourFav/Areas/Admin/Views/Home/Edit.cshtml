@@ -1,0 +1,35 @@
+﻿@model BookYourFav.Models.Movie
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "Edit";
+}
+<h2>@Model.mname</h2>
+
+
+@using (Html.BeginForm("Edit", "Home", new { area = "Admin" }, FormMethod.Post, null))
+{
+    <table style="margin-left:40%;">
+        @Html.HiddenFor(model => model.mid)
+        @Html.HiddenFor(model => model.mname)
+        <tr>
+            <td>@Html.Label("Theater Name")</td>
+            <td>@Html.EditorFor(movie => movie.mtheaterName)</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Location")</td>
+            <td>@Html.EditorFor(movie => movie.mlocation)</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Tickets Allocated")</td>
+            <td>@Html.EditorFor(movie => movie.mticketAllocated)</td>
+            <td><input type="hidden" name="mticketBooked" value="0" /></td>
+        </tr>
+
+    </table>
+    <br />
+        <input class="btn" type="submit" value="Done" />
+
+}

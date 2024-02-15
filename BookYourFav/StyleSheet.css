@@ -1,0 +1,51 @@
+﻿.btn{
+  background-color:red;
+  color:white;
+  font-weight:bolder;
+}
+.btn:hover
+{
+    background-color:green;
+    transform:scale(1.2);
+}
+h2{
+    color:yellow;
+    text-shadow:1px 1px 1px black;
+}
+h2:hover{
+    color:orange;
+    transform:scale(1.6);
+}
+th{
+    color:red;
+     text-shadow:1px 1px 1px black;
+}
+td{
+    color:pink;
+}
+td:hover
+{
+    color:greenyellow;
+    text-shadow:1px 1px 1px green;
+}
+h1{
+    color:greenyellow;
+   text-shadow:2px 2px 2px green;
+}
+h1:hover{
+    color:pink;
+    text-shadow:2px 2px 2px purple ;
+
+}
+
+.field{
+   background:rgba(0,0,0,0.5);
+   color:pink;
+   text-shadow:1px 1px 1px purple;
+   font-weight:bolder;
+}
+.c{
+    color:white;
+    font-weight:bolder;
+    text-shadow:1px 1px 1px black;
+}

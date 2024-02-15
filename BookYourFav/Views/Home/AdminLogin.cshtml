@@ -1,0 +1,25 @@
+﻿@model BookYourFav.Models.Admin
+@{
+    ViewBag.Title = "AdminLogin";
+}
+
+@using (Html.BeginForm("AdminLogin", "Home", new { area = "" }, FormMethod.Post, null))
+{
+    <table style="margin-left:40%;">
+        <tr>
+            <td>@Html.Label("Name")</td>
+            <td>@Html.TextBoxFor(admin => admin.aname)</td>
+
+        </tr>
+        <tr>
+            <td>@Html.Label("Password")</td>
+            <td>@Html.PasswordFor(admin => admin.apassword)</td>
+
+        </tr>
+        </table>
+        <br />
+        <input class="btn" type="submit" value="Login" />
+        <br /><br />
+
+}
+

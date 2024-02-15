@@ -1,0 +1,81 @@
+﻿@model IEnumerable<BookYourFav.Models.Movie>
+
+@using BookYourFav.Models;
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "UserPage";
+}
+
+<h2>Hi @Session["Uname"].ToString()</h2>
+
+
+<table style="margin-left:20%;">
+    @{
+        int sno = 1;
+    }
+    <tr>
+        <th>S.No</th>
+        <th>Movie Name</th>
+        <th>Theater Name</th>
+        <th>Location</th>
+        <th>Tickets Available</th>
+    </tr>
+    <tr><td>&nbsp;</td></tr>
+
+    @foreach (Movie movie in Model)
+    {
+        var available = movie.mticketAllocated - movie.mticketBooked;
+       
+            <tr>
+                <td><text>[@sno]</text></td>
+                <td>@movie.mname</td>
+                <td>@movie.mtheaterName</td>
+                <td>@movie.mlocation</td>
+                <td>@available</td> 
+                 @using (Html.BeginForm("Book", "Home", new { area = "Users", movieid = movie.mid }, FormMethod.Post))
+                 {
+                 <td><input class="btn" type="submit" value="Book" onclick="return confirm('Are you sure, You want to Book a ticket ?')" /></td>
+                 }
+                @using (Html.BeginForm("Details", "Home", new { area = "Users", movieid = movie.mid }, FormMethod.Post))
+                {
+                    <td><input class="btn" type="submit" value="Details" /></td>
+                }
+                <td>@if (ViewBag.Result == movie.mid)
+                {
+                    if(ViewBag.Data=="Book")
+                    {
+                        <text>Ticket Booked Successfully...</text>;
+                    }
+                    else if(ViewBag.Data=="Details")
+                    {
+                        @ViewBag.Detail;
+                    }
+                    else
+                    {
+                        <text></text>;
+                    }
+                }
+                else
+                {
+                    <text></text>;
+                }
+                </td>
+            </tr>
+       
+
+        sno++;
+    }
+
+</table>
+<br />
+@using (Html.BeginForm("uLogout", "Home", new { area = "" }, FormMethod.Post))
+{
+    <td><input class="btn"  type="submit" value="Logout" onclick="return confirm('Are you sure, You want to Quit ?')" /></td>
+}
+
+
+
+
